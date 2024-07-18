@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Peacock-Nest Kids DayCare Center - Home</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href="../static/Css/style.css" th:href="@{/Css/style.css}"> <!-- Links to the external CSS file for styling -->
+    <script type="text/javascript" src="../static/JavaScript/JavaScriptFile.js" th:src="@{/JavaScript/JavaScriptFile.js}"></script> <!-- Links to the external JavaScript file -->
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!--    &lt;!&ndash; Link to Font Awesome &ndash;&gt;-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">-->
+
+    <style>
+        /* Additional styling for logo and tagline */
+        .ebox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: lightgrey; /* Background color for the logo and tagline section */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .ebox img {
+            width: 250px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+        .ebox h5 {
+            margin: 0;
+            font-size: 1.2em; /* Adjust font size as needed */
+            font-style: italic;
+            text-align: center;
+        }
+        #eligibility {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/index}">Home</a></li> <!-- Navigation link to Home page -->
+            <li><a th:href="@{/about}">About Us</a></li> <!-- Navigation link to About Us page -->
+            <li>
+                <a href="#">Services</a> <!-- Navigation link to Services with a dropdown menu -->
+                <ul class="dropdown">
+                    <li><a href="#">Full-time Care</a></li> <!-- Dropdown link to Full-time Care -->
+                    <li><a href="#">Part-time Care</a></li> <!-- Dropdown link to Part-time Care -->
+                    <li><a href="#">After-school Programs</a></li> <!-- Dropdown link to After-school Programs -->
+                </ul>
+            </li>
+            <li><a th:href="@{/contact}">Contact Us</a></li> <!-- Navigation link to Contact Us page -->
+            <li><a th:href="@{/welcome}">Images/Videos</a></li> <!-- Navigation link to Images/Videos page -->
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="logo-p">
+        <section>
+            <div class="marquee">
+                Peacock-Nest Kids DayCare Center <!-- Marquee text displaying the name of the daycare center -->
+            </div>
+            <div class="slogan">
+                <p id="p-index">Welcome to Peacock Nest Daycare Center, where we nurture little minds with the same
+                    care and attention as a peacock creates its nest with love, dedication, and a
+                    touch of whimsy. Like the vibrant feathers that adorn a peacock, our
+                    center is a place of color and joy, designed to inspire curiosity and
+                    growth in every child. Here, safety and comfort are paramount, ensuring
+                    that each child feels cherished and secure as they embark on their journey of discovery.
+                    Join us in creating memories and learning experiences that will shape their futures,
+                    one feather at a time.<br></p> <!-- Description and welcome message for the daycare center -->
+
+                <div class="ebox">
+                    <div>
+                        <img src="../static/Images/PeacockNestLogo.jpg" th:src="@{/Images/PeacockNestLogo.jpg}" alt="Peacock-Nest Kids Daycare"> <!-- Logo of the daycare center -->
+                    </div>
+                    <div>
+                        <h5>"Growing Bright Minds in a Nurturing Nest"<br></h5> <!-- Tagline of the daycare center -->
+                        <div id="eligibility"><a th:href="@{/calculate}">Eligibility and Fee Calculation</a></div> <!-- Link to Eligibility and Fee Calculation page -->
+                    </div>
+                </div>
+                <div class="img-txt">
+                    <img width="650" src="../static/Images/Daycaretwo.jpg" th:src="@{/Images/Daycaretwo.jpg}" alt="Peacock-Nest Kids Daycare"> <!-- Image of the daycare center -->
+
+                    <p class="box">
+                        At Peacock Nest Daycare Center, we believe that every child is a unique and
+                        precious gem, ready to spread their wings and soar. Our dedicated team of educators
+                        and caregivers work tirelessly to create an environment that balances structured
+                        learning with free-spirited play, fostering both academic and social development.
+                        With a curriculum that embraces creativity, diversity, and exploration,
+                        we encourage children to discover their passions and talents.
+                        Our vibrant classrooms and outdoor spaces are designed to stimulate young minds,
+                        promoting a love for learning that will last a lifetime. Join us at Peacock Nest
+                        Daycare Center, where every day is an opportunity to watch your child flourish in a
+                        supportive and enchanting setting.
+                    </p> <!-- Detailed description of the daycare center's philosophy and environment -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <section>
+        <h2>Sign Up for Our Newsletter</h2> <!-- Heading for the newsletter signup form -->
+        <form id="newsletter-form">
+            <label for="newsletter-email">Email:</label> <!-- Label for the email input field -->
+            <input type="email" id="newsletter-email" name="email" required> <!-- Input field for the email, required for submission -->
+            <button id="id-subscribe" type="submit">Subscribe</button> <!-- Submit button for the form -->
+        </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Peacock-Nest Kids Daycare</p> <!-- Footer content with copyright information -->
+</footer>
+</body>
+</html>
